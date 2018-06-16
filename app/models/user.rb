@@ -6,6 +6,10 @@ class User < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :locations,
+             :through => :histories,
+             :source => :location
+
   # Validations
 
   # Include default devise modules. Others available are:
